@@ -17,8 +17,13 @@ To install (unix):
 
 
 
-To install (windows)
+To install (windows), with Git Bash
 
-    cd vim/vimfiles
-    git clone git://github.com/sanchon/vim-config.git .
+    cd /c/Program Files/vim/vimfiles
+    git init
+    git remote add origin git://github.com/sanchon/vim-config.git 
+    git pull origin master
+    git submodule init
+    git submodule update
+   
 
