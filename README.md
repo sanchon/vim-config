@@ -31,4 +31,4 @@ To install (windows), with Git Bash
 adding more plugins
 -------------------
 
-  git submodule add git://github.com/nelstrom/vim-visual-star-search.git bundle/vim-visual-star-search
+    git submodule add git://github.com/nelstrom/vim-visual-star-search.git bundle/vim-visual-star-search
