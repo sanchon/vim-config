@@ -11,9 +11,9 @@ To install (unix):
 
     cd .vim
     git clone git://github.com/sanchon/vim-config.git .
-    cp .vimrc ..
     git submodule init
     git submodule update
+    cp .vimrc ..
 
 
 
@@ -25,5 +25,6 @@ To install (windows), with Git Bash
     git pull origin master
     git submodule init
     git submodule update
+    cp .vimrc ../_vimrc
    
 
