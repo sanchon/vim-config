@@ -2,11 +2,7 @@
 " Carga de plugins con pathogen
 "------------------------------------------------------------------------
 filetype off                                     "por algun motivo hay que quitar el filetype
-if has("win32")                                  "en windows tengo el bundle en otro sitio... sorry...
-  execute pathogen#infect('bundle\{}','c:\\Archivos\ de\ programa\\vim\\vimfiles\\vim-config\\bundle\{}')
-else
-  call pathogen#infect()
-endif
+call pathogen#infect()
 call pathogen#helptags()
 syntax on                                         "colorear sintaxis
 filetype on                                       "volvemos a activar el filetype
