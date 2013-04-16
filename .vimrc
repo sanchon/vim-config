@@ -93,4 +93,7 @@ let g:SimplenoteUsername = "sanchon@gmail.com"
 let g:SimplenotePassword = "tata2809"
 
 
-
+" ------------------------------------------------------------------------
+"  Plugin:NerdTree
+" ------------------------------------------------------------------------
+map <leader>n :NERDTreeToggle<CR>
