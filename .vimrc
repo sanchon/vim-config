@@ -97,3 +97,13 @@ let g:SimplenotePassword = "tata2809"
 "  Plugin:NerdTree
 " ------------------------------------------------------------------------
 map <leader>n :NERDTreeToggle<CR>
+
+
+
+" ------------------------------------------------------------------------
+"  Plugin:Supertab
+" ------------------------------------------------------------------------
+let g:SuperTabDefaultCompletionType = "context"
+set completeopt=menuone,longest,preview
+
+
