@@ -25,8 +25,8 @@ To install (windows), with Git Bash
     git pull origin master
     git submodule init
     git submodule update
-    cp .vimrc ../_vimrc
-   
+    cd ..
+    fsutil hardlink create _vimrc .\vimfiles\.vimrc   
 
 adding more plugins
 -------------------
