@@ -58,7 +58,7 @@ if has("gui_running")                     "El tipo de letra en una gui...
   elseif has("win32")                     " |
     set guifont=Consolas:h8               " ·--en Windows
   else                                    " |
-    set guifont=Droid\ Sans\ Mono\ 8"     " ·--elsewhere
+    set guifont=Droid\ Sans\ Mono\ 8      " ·--elsewhere
   endif
 endif
 
