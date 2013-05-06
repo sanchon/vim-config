@@ -13,7 +13,7 @@ To install (unix):
     git clone git://github.com/sanchon/vim-config.git .
     git submodule init
     git submodule update
-    cp .vimrc ..
+    ln -s .vim/.vimrc .vimrc
 
 
 
