@@ -46,7 +46,7 @@ if has("win32")                                  "en Windows... copy-paste con c
 endif
 
 
-if has("win32")                                  "en Windows... el leader puede ser º (es como el \ pero sin altgr)
+if has("win32") || has("mac")                    "en Windows y Mac... el leader puede ser º (es como el \ pero sin altgr)
     let mapleader="º"
 endif
 
