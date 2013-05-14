@@ -88,8 +88,11 @@ set wildmenu                              "autocompletado mejorado
 "--------------------------------------------------------------------------
 " Programacion: Python
 "--------------------------------------------------------------------------
-set foldmethod=indent
-set foldlevel=99
+if has("autocmd")
+    filetype on
+    autocmd Filetype python set foldmethod=indent
+    autocmd Filetype python set foldlevel=99
+endif
 
 
 
