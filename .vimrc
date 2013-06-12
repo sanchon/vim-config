@@ -106,5 +106,6 @@ map <leader>n :NERDTreeToggle<CR>
 " ------------------------------------------------------------------------
 let g:SuperTabDefaultCompletionType = "context"
 set completeopt=menuone,longest,preview
-
+let g:SuperTabMappingForward = '<c-space>'
+let g:SuperTabMappingBackward = '<s-c-space>'
 
