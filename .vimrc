@@ -20,7 +20,7 @@ if has("gui_running")
 endif
 set nowrap
 set clipboard=unnamed
-
+set backspace=indent,eol,start                    "algunas veces no funciona 
 
 
 "--------------------------------------------------------------------------
@@ -105,6 +105,8 @@ map <leader>n :NERDTreeToggle<CR>
 "  Plugin:Supertab
 " ------------------------------------------------------------------------
 let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabMappingForward = '<c-space>'		" el tabulador es demasiado agresivo 
+let g:SuperTabMappingBackward = '<s-c-space>'
 set completeopt=menuone,longest,preview
 
 
