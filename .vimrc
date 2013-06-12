@@ -108,5 +108,6 @@ let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabMappingForward = '<c-space>'		" el tabulador es demasiado agresivo 
 let g:SuperTabMappingBackward = '<s-c-space>'
 set completeopt=menuone,longest,preview
-
+let g:SuperTabMappingForward = '<c-space>'
+let g:SuperTabMappingBackward = '<s-c-space>'
 
