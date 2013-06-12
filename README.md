@@ -26,7 +26,7 @@ To install (windows), with Git Bash
     git submodule init
     git submodule update
     cd ..
-    fsutil hardlink create _vimrc /vimfiles/.vimrc   
+    fsutil hardlink create _vimrc vimfiles/.vimrc   
 
 
 To update to most recent version of every plugin
