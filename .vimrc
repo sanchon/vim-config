@@ -1,6 +1,8 @@
 "------------------------------------------------------------------------
 " Carga de plugins con pathogen
 "------------------------------------------------------------------------
+let g:pathogen_disabled = []                     "por si queremos deshabilitar algun plugin
+
 filetype off                                     "por algun motivo hay que quitar el filetype
 call pathogen#infect()
 call pathogen#helptags()
