@@ -70,3 +70,6 @@
 	path = bundle/vim-visual-star-search
 	url = https://github.com/nelstrom/vim-visual-star-search.git
 	ignore = dirty
+[submodule "bundle/EnhCommentify.vim"]
+	path = bundle/EnhCommentify.vim
+	url = https://github.com/vim-scripts/EnhCommentify.vim.git
