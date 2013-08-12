@@ -73,3 +73,4 @@
 [submodule "bundle/EnhCommentify.vim"]
 	path = bundle/EnhCommentify.vim
 	url = https://github.com/vim-scripts/EnhCommentify.vim.git
+	ignore=dirty
