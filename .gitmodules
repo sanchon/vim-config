@@ -74,3 +74,7 @@
 	path = bundle/EnhCommentify.vim
 	url = https://github.com/vim-scripts/EnhCommentify.vim.git
 	ignore=dirty
+[submodule "bundle/jcl"]
+	path = bundle/jcl
+	url = https://github.com/vim-scripts/jcl.vim.git
+	ignore=dirty
