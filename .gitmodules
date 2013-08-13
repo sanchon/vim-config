@@ -78,3 +78,11 @@
 	path = bundle/jcl
 	url = https://github.com/vim-scripts/jcl.vim.git
 	ignore=dirty
+[submodule "bundle/PLI-Tools"]
+	path = bundle/PLI-Tools
+	url = https://github.com/vim-scripts/PLI-Tools.git
+	ignore=dirty
+[submodule "bundle/vartabs"]
+	path = bundle/vartabs
+	url = https://github.com/sanchon/vartabs.vim.git
+	ignore=dirty

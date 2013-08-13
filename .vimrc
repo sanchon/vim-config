@@ -4,7 +4,8 @@
 let g:pathogen_disabled = []                     "por si queremos deshabilitar algun plugin
 
 filetype off                                     "por algun motivo hay que quitar el filetype
-call pathogen#infect()
+"call pathogen#infect()
+call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 syntax on                                         "colorear sintaxis
 filetype on                                       "volvemos a activar el filetype
