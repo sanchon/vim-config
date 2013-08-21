@@ -31,6 +31,7 @@ set backspace=indent,eol,start                    "algunas veces no funciona
 "--------------------------------------------------------------------------
 set incsearch                                    "busqueda visual chachi
 set smartcase     	                         "es ignorecase si escribes en minusculas
+set autochdir                                    "cambia el directorio actual al del fichero abierto
 
 map <F8> :bn<CR>                                 "buffers: siguiente
 map <F7> :bp<CR>                                 "buffers: anterior
