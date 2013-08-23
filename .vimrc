@@ -31,7 +31,9 @@ set backspace=indent,eol,start                    "algunas veces no funciona
 "--------------------------------------------------------------------------
 set incsearch                                    "busqueda visual chachi
 set smartcase     	                         "es ignorecase si escribes en minusculas
-set autochdir                                    "cambia el directorio actual al del fichero abierto
+if has("gui_running")
+    set autochdir                                "cambia el directorio actual al del fichero abierto 
+endif
 
 map <F8> :bn<CR>                                 "buffers: siguiente
 map <F7> :bp<CR>                                 "buffers: anterior
@@ -73,7 +75,7 @@ if has("gui_running")                     "El tipo de letra en una gui...
   endif
 endif
 
-if &t_Co > 2 || has("gui_running")        "Si hay una gui o un terminal con colores...
+if has("gui_running")                     "Si hay una gui 
   colorscheme murphy                      "esquema. Otros: darkblue, delek, desert, elflord, evening,
 endif                                     "macvim, morning, murphy, pablo, peachpuff, 
                                           "ron, shine, slate, torte, zellner
