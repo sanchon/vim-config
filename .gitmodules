@@ -86,3 +86,7 @@
 	path = bundle/vartabs
 	url = https://github.com/sanchon/vartabs.vim.git
 	ignore=dirty
+[submodule "bundle/vim-colors-solarized"]
+	path = bundle/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
+	ignore=dirty

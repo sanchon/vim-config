@@ -1,7 +1,7 @@
 "------------------------------------------------------------------------
 " Carga de plugins con pathogen
 "------------------------------------------------------------------------
-let g:pathogen_disabled = []                     "por si queremos deshabilitar algun plugin
+let g:pathogen_disabled = ["ropevim"]                     "por si queremos deshabilitar algun plugin
 
 filetype off                                     "por algun motivo hay que quitar el filetype
 "call pathogen#infect()
@@ -57,6 +57,15 @@ if has("win32") || has("mac")                    "en Windows y Mac... el leader 
 endif
 
 
+"--------------------------------------------------------------------------
+" indenting done right
+"--------------------------------------------------------------------------
+set tabstop=4
+set expandtab
+set shiftwidth=4
+set smarttab autoindent
+
+
 
 "--------------------------------------------------------------------------
 " aspecto
@@ -75,10 +84,10 @@ if has("gui_running")                     "El tipo de letra en una gui...
   endif
 endif
 
-if has("gui_running")                     "Si hay una gui 
-  colorscheme murphy                      "esquema. Otros: darkblue, delek, desert, elflord, evening,
-endif                                     "macvim, morning, murphy, pablo, peachpuff, 
-                                          "ron, shine, slate, torte, zellner
+if has("gui_running")                     
+  colorscheme murphy                     
+endif                                     
+                                          
 
 set number
 set ruler
@@ -123,6 +132,7 @@ map <leader>g :GundoToggle<CR>
 " ------------------------------------------------------------------------
 "  Plugin:Supertab
 " ------------------------------------------------------------------------
+au FileType python set omnifunc=pythoncomplete#Complete
 let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabMappingForward = '<c-space>'		" el tabulador es demasiado agresivo 
 let g:SuperTabMappingBackward = '<s-c-space>'
