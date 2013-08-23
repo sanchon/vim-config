@@ -22,7 +22,7 @@ if has("gui_running")
     set guioptions=abegmrLtT
 endif
 set nowrap
-set clipboard=unnamed
+set clipboard=unnamed                             "para que se use siempre el registro * en lugar del unnamed
 set backspace=indent,eol,start                    "algunas veces no funciona 
 
 
@@ -99,6 +99,11 @@ if has("autocmd")
 endif
 
 
+
+" ------------------------------------------------------------------------
+"  Plugin:matchit
+" ------------------------------------------------------------------------
+runtime macros/matchit.vim
 
 
 " ------------------------------------------------------------------------
