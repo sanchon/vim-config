@@ -71,14 +71,15 @@ set smarttab autoindent
 " aspecto
 "--------------------------------------------------------------------------
 set columns=120                           "columnas
-set lines=60                              "filas
+set lines=50                              "filas
 "set textwidth=100 	                  "rompe autom. los 100 caracteres con un CRLF
 
 if has("gui_running")                     "El tipo de letra en una gui...
   if has("gui_macvim")                    " |
-    set guifont=Source\ Code\ Pro:h10     " ·--en MacOS
+    set guifont=Menlo:h12:                " ·--en MacOS
   elseif has("win32")                     " |
-    set guifont=Consolas:h8               " ·--en Windows
+"   set guifont=Consolas:h8               " ·--en Windows
+    set guifont=Source\ Code\ Pro:h9      " ·--en Windows
   else                                    " |
     set guifont=Droid\ Sans\ Mono\ 8      " ·--elsewhere
   endif
@@ -91,6 +92,8 @@ endif
 
 set number
 set ruler
+
+set laststatus=2                          "siempre se muestra la 'statusline'
 
 set showcmd                               "muestra el comando en la statusline
 set wildmenu                              "autocompletado mejorado
