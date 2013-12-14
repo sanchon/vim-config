@@ -79,7 +79,7 @@ if has("gui_running")                     "El tipo de letra en una gui...
     set guifont=Menlo:h12:                " ·--en MacOS
   elseif has("win32")                     " |
 "   set guifont=Consolas:h8               " ·--en Windows
-    set guifont=Source\ Code\ Pro:h9      " ·--en Windows
+    set guifont=Source\ Code\ Pro\ Medium:h9      " ·--en Windows
   else                                    " |
     set guifont=Droid\ Sans\ Mono\ 8      " ·--elsewhere
   endif
@@ -132,4 +132,10 @@ let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabMappingForward = '<c-space>'		" el tabulador es demasiado agresivo 
 let g:SuperTabMappingBackward = '<s-c-space>'
 set completeopt=menuone,longest,preview
+
+
+" ------------------------------------------------------------------------
+"  Plugin:Airline (ojo, necesitas una "patched font" para que mole)
+" ------------------------------------------------------------------------
+let g:airline_powerline_fonts=1
 
