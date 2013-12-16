@@ -27,7 +27,7 @@ To install (windows), with Git Bash
     git submodule update
     cd ..
     fsutil hardlink create _vimrc vimfiles/.vimrc   
-
+    (or, better yet, use "link shell extension" for windows)
 
 To update local repository to most recent version of every plugin
 
@@ -39,6 +39,7 @@ To update local repository to most recent version of every plugin
 To update from remote repository
 
     git pull
+    git submodule init
     git submodule update
 
 
