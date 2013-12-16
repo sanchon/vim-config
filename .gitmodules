@@ -90,3 +90,11 @@
 	path = bundle/vim-airline
 	url = https://github.com/bling/vim-airline
     ignore=dirty
+[submodule "powerline-fonts"]
+	path = powerline-fonts
+	url = https://github.com/Lokaltog/powerline-fonts.git
+    ignore=dirty
+[submodule "bundle\\bufferline"]
+	path = bundle\\bufferline
+	url = https://github.com/bling/vim-bufferline
+    ignore=dirty
