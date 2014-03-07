@@ -76,7 +76,7 @@ set lines=50                              "filas
 
 if has("gui_running")                                     "El tipo de letra en una gui...
   if has("gui_macvim")                                    " |
-    set guifont=Menlo:h12:                                " ·--en MacOS
+    set guifont=Ubuntu_Mono_derivative_Powerline:h13      " ·--en MacOS
   elseif has("win32")                                     " |
     set guifont=Ubuntu_Mono_derivative_Powerlin:h10:cANSI " ---en Windows
   else                                                    " |
