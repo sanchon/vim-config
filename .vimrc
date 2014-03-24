@@ -76,7 +76,7 @@ set lines=50                              "filas
 
 if has("gui_running")                                     "El tipo de letra en una gui...
   if has("gui_macvim")                                    " |
-    set guifont=Ubuntu_Mono_derivative_Powerline:h13      " ·--en MacOS
+    set guifont=Menlo:h12:                                " ·--en MacOS
   elseif has("win32")                                     " |
     set guifont=Ubuntu_Mono_derivative_Powerlin:h10:cANSI " ---en Windows
   else                                                    " |
@@ -136,5 +136,9 @@ set completeopt=menuone,longest,preview
 " ------------------------------------------------------------------------
 "  Plugin:Airline (ojo, necesitas una "patched font" para que mole)
 " ------------------------------------------------------------------------
-let g:airline_powerline_fonts=1
+if has("gui_running")                        
+    let g:airline_powerline_fonts=1  "(estos simbolitos no funcionan en la shell)
+endif
+
+
 
