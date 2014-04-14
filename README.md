@@ -29,6 +29,10 @@ To install (windows), with Git Bash
     fsutil hardlink create _vimrc vimfiles/.vimrc   
     (or, better yet, use "link shell extension" for windows)
 
+    (on Windows XP at least, links are not preserved... I use this _vimrc:)
+    source $VIM\vimfiles\.vimrc
+
+
 To update local repository to most recent version of every plugin
 
     git submodule foreach git checkout master

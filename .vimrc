@@ -78,7 +78,7 @@ if has("gui_running")                                       "El tipo de letra en
   if has("gui_macvim")                                      " |
     set guifont=Ubuntu\ Mono\ derivative\ Powerline:h12     " ---en Mac OS X
   elseif has("win32")                                       " |
-    set guifont=Ubuntu_Mono_derivative_Powerline:h10:cANSI  " ---en Windows
+    set guifont=Ubuntu_Mono_derivative_Powerlin:h10:cANSI  " ---en Windows
   else                                                      " |
     set guifont=Droid\ Sans\ Mono\ 8                        " ·--elsewhere
   endif
