@@ -23,8 +23,7 @@ To install (windows), with Git Bash
     git init
     git remote add origin https://github.com/sanchon/vim-config.git 
     git pull origin master
-    git submodule init
-    git submodule update
+    git submodule update --init --recursive
     cd ..
     fsutil hardlink create _vimrc vimfiles/.vimrc   
     (or, better yet, use "link shell extension" for windows)
@@ -43,8 +42,7 @@ To update local repository to most recent version of every plugin
 To update from remote repository
 
     git pull
-    git submodule init
-    git submodule update
+    git submodule update --init --recursive
 
 
 

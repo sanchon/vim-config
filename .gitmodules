@@ -50,10 +50,6 @@
 	path = bundle/nerdtree
 	url = https://github.com/vim-scripts/The-NERD-tree.git
 	ignore = dirty
-[submodule "bundle/ropevim"]
-	path = bundle/ropevim
-	url = https://github.com/sontek/rope-vim.git
-	ignore = dirty
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
@@ -61,7 +57,7 @@
 [submodule "bundle/simplenote"]
 	path = bundle/simplenote
 	url = https://github.com/mrtazz/simplenote.vim.git
-	ignore = dirty
+	ignore = dirty	
 [submodule "bundle/vim-visual-star-search"]
 	path = bundle/vim-visual-star-search
 	url = https://github.com/nelstrom/vim-visual-star-search.git
