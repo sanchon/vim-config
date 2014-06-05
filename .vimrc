@@ -24,7 +24,8 @@ endif
 set nowrap
 set clipboard=unnamed                             "para que se use siempre el registro * en lugar del unnamed
 set backspace=indent,eol,start                    "algunas veces no funciona 
-
+set undofile                                      "se preserva el historial de cambios
+set undodir=~/
 
 "--------------------------------------------------------------------------
 " usabilidad
