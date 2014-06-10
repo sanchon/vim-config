@@ -1,12 +1,10 @@
 "------------------------------------------------------------------------
 " Carga de plugins con pathogen
 "------------------------------------------------------------------------
-let g:pathogen_disabled = ["ropevim"]                     "por si queremos deshabilitar algun plugin
-
-filetype off                                     "por algun motivo hay que quitar el filetype
-"call pathogen#infect()
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+let g:pathogen_disabled = ["ropevim"]             "por si queremos deshabilitar algun plugin
+filetype off                                      "por algun motivo hay que quitar el filetype
+call pathogen#runtime_append_all_bundles()        
+call pathogen#helptags()                          
 syntax on                                         "colorear sintaxis
 filetype on                                       "volvemos a activar el filetype
 filetype plugin indent on                         "plugins adicionales para la indentacion
@@ -24,20 +22,31 @@ endif
 set nowrap
 set clipboard=unnamed                             "para que se use siempre el registro * en lugar del unnamed
 set backspace=indent,eol,start                    "algunas veces no funciona 
-set undofile                                      "se preserva el historial de cambios
-set undodir=~/
+
 
 "--------------------------------------------------------------------------
 " usabilidad
 "--------------------------------------------------------------------------
 set incsearch                                    "busqueda visual chachi
-set smartcase     	                         "es ignorecase si escribes en minusculas
+set smartcase     	                             "es ignorecase si escribes en minusculas
 if has("gui_running")
     set autochdir                                "cambia el directorio actual al del fichero abierto 
 endif
 
-map <F8> :bn<CR>                                 "buffers: siguiente
-map <F7> :bp<CR>                                 "buffers: anterior
+"para cambiar de buffer rápidamente
+"----------------------------------
+set hidden                                       "no me importa que haya buffers ocultos
+map <F8> :bn<CR>                                
+imap <F8> <Esc>:bn<CR>                           
+map <F7> :bp<CR>                                 
+imap <F7> <Esc>:bp<CR>
+
+"para cambiar de tab rápidamente
+"-------------------------------
+map <C-Tab> :tabnext<CR>
+imap <C-Tab> <Esc>:tabnext<CR>
+map <C-S-Tab> :tabprevious<CR>
+imap <C-S-Tab> <Esc>:tabprevious<CR>
 
 
 if has("win32")                                  "en Windows... copy-paste con ctrl-c y ctrl-v
