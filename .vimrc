@@ -28,7 +28,7 @@ set backspace=indent,eol,start                    "algunas veces no funciona
 " usabilidad
 "--------------------------------------------------------------------------
 set incsearch                                    "busqueda visual chachi
-set smartcase     	                             "es ignorecase si escribes en minusculas
+set smartcase
 if has("gui_running")
     set autochdir                                "cambia el directorio actual al del fichero abierto
 endif
