@@ -95,7 +95,8 @@ if has("gui_running")                                       "El tipo de letra en
 endif
 
 if has("gui_running")                     
-  colorscheme murphy                     
+  set background=dark
+  colorscheme solarized                    
 endif                                     
                                           
 
