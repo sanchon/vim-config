@@ -3,16 +3,16 @@
 "------------------------------------------------------------------------
 let g:pathogen_disabled = ["ropevim"]             "por si queremos deshabilitar algun plugin
 filetype off                                      "por algun motivo hay que quitar el filetype
-call pathogen#runtime_append_all_bundles()        
-call pathogen#helptags()                          
+call pathogen#runtime_append_all_bundles(
+call pathogen#helptags()
 syntax on                                         "colorear sintaxis
 filetype on                                       "volvemos a activar el filetype
 filetype plugin indent on                         "plugins adicionales para la indentacion
 
 
 
-" ----------------------------------------------------------- 
-" General 
+" -----------------------------------------------------------
+" General
 " -----------------------------------------------------------
 set nocompatible                                  "funciones avanzadas
 set encoding=utf-8                                "otra opcion es latin1
@@ -21,7 +21,7 @@ if has("gui_running")
 endif
 set nowrap
 set clipboard=unnamed                             "para que se use siempre el registro * en lugar del unnamed
-set backspace=indent,eol,start                    "algunas veces no funciona 
+set backspace=indent,eol,start                    "algunas veces no funciona
 
 
 "--------------------------------------------------------------------------
@@ -30,15 +30,15 @@ set backspace=indent,eol,start                    "algunas veces no funciona
 set incsearch                                    "busqueda visual chachi
 set smartcase     	                             "es ignorecase si escribes en minusculas
 if has("gui_running")
-    set autochdir                                "cambia el directorio actual al del fichero abierto 
+    set autochdir                                "cambia el directorio actual al del fichero abierto
 endif
 
 "para cambiar de buffer rápidamente
 "----------------------------------
 set hidden                                       "no me importa que haya buffers ocultos
-map <F8> :bn<CR>                                
-imap <F8> <Esc>:bn<CR>                           
-map <F7> :bp<CR>                                 
+map <F8> :bn<CR>
+imap <F8> <Esc>:bn<CR>
+map <F7> :bp<CR>
 imap <F7> <Esc>:bp<CR>
 
 "para cambiar de tab rápidamente
@@ -94,11 +94,11 @@ if has("gui_running")                                       "El tipo de letra en
   endif
 endif
 
-if has("gui_running")                     
+if has("gui_running")
   set background=dark
-  colorscheme solarized                    
-endif                                     
-                                          
+  colorscheme solarized
+endif
+
 
 set number
 set ruler
@@ -142,7 +142,7 @@ map <leader>g :GundoToggle<CR>
 " ------------------------------------------------------------------------
 au FileType python set omnifunc=pythoncomplete#Complete
 let g:SuperTabDefaultCompletionType = "context"
-let g:SuperTabMappingForward = '<c-space>'		" el tabulador es demasiado agresivo 
+let g:SuperTabMappingForward = '<c-space>'		" el tabulador es demasiado agresivo
 let g:SuperTabMappingBackward = '<s-c-space>'
 set completeopt=menuone,longest,preview
 
@@ -150,7 +150,7 @@ set completeopt=menuone,longest,preview
 " ------------------------------------------------------------------------
 "  Plugin:Airline (ojo, necesitas una "patched font" para que mole)
 " ------------------------------------------------------------------------
-if has("gui_running")                        
+if has("gui_running")
     let g:airline_powerline_fonts=1  "(estos simbolitos no funcionan en la shell)
 endif
 
