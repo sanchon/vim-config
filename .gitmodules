@@ -90,3 +90,6 @@
 	path = bundle/bufferline
 	url = https://github.com/bling/vim-bufferline
     ignore=dirty
+[submodule "bundle/howmuch"]
+	path = bundle/howmuch
+	url = https://github.com/sk1418/HowMuch.git
