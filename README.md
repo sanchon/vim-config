@@ -17,19 +17,18 @@ To install (unix):
 
 
 
-To install (windows), with Git Bash
+To install (windows), with cmd
 
-    cd /c/Program Files/vim/vimfiles
+    cd %HOMEDRIVE%%HOMEPATH%
+    mkdir vimfiles
+    chdir vimfiles
     git init
     git remote add origin https://github.com/sanchon/vim-config.git 
     git pull origin master
     git submodule update --init --recursive
-    cd ..
-    fsutil hardlink create _vimrc vimfiles/.vimrc   
-    (or, better yet, use "link shell extension" for windows)
+    copy _vimrc ..
+    copy .simplenoterc.vim ..
 
-    (on Windows XP at least, links are not preserved... I use this _vimrc:)
-    source $VIM\vimfiles\.vimrc
 
 
 To update local repository to most recent version of every plugin
