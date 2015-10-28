@@ -88,7 +88,7 @@ if has("gui_running")                                       "El tipo de letra en
   if has("gui_macvim")                                      " |
     set guifont=Ubuntu\ Mono\ derivative\ Powerline:h12     " ---en Mac OS X
   elseif has("win32")                                       " |
-    set guifont=Ubuntu_Mono_derivative_Powerlin:h10:cANSI  " ---en Windows
+    set guifont=Ubuntu_Mono_derivative_Powerlin:h9:cANSI  " ---en Windows
   else                                                      " |
     set guifont=Droid\ Sans\ Mono\ 8                        " ·--elsewhere
   endif
@@ -108,6 +108,9 @@ set laststatus=2                          "siempre se muestra la 'statusline'
 set showcmd                               "muestra el comando en la statusline
 set wildmenu                              "autocompletado mejorado
 
+if has("win32")                           "si es windows, intentamos maximizar la ventana
+  au GUIEnter * simalt ~x
+endif
 "--------------------------------------------------------------------------
 
 
@@ -118,6 +121,9 @@ set wildmenu                              "autocompletado mejorado
 "  Plugin:simplenote
 " ------------------------------------------------------------------------
 source ~/.simplenoterc.vim
+"let g:SimplenoteListHeight=20
+let g:SimplenoteVertical=1
+
 
 " ------------------------------------------------------------------------
 "  Plugin:matchit
@@ -156,3 +162,8 @@ endif
 
 
 
+" ------------------------------------------------------------------------
+"  Plugin: Pandoc
+" ------------------------------------------------------------------------
+let g:pandoc#spell#enabled=0
+let g:pandoc#folding#level=20
