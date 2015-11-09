@@ -31,21 +31,21 @@ To install (windows), with cmd
 
 
 
-To update local repository to most recent version of every plugin
+This is no longer necessary, since we are using Vundle, to update local repository to most recent version of every plugin
 
     git submodule foreach git checkout master
     git submodule foreach git pull    
     git add...
     git commit...
     
-To update from remote repository
+This is no longer necessary, either, to update from remote repository
 
     git pull
     git submodule update --init --recursive
 
 
 
-adding more plugins
--------------------
+adding another submodule
+------------------------
 
     git submodule add https://github.com/nelstrom/vim-visual-star-search.git bundle/vim-visual-star-search
