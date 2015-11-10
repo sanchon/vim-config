@@ -1,18 +1,3 @@
-"------------------------------------------------------------------------
-" Carga de plugins con pathogen
-"------------------------------------------------------------------------
-" OJO, Pathogen desabilitado
-"------------------------------------------------------------------------
-"let g:pathogen_disabled = ["ropevim"]             "por si queremos deshabilitar algun plugin
-filetype off                                      "por algun motivo hay que quitar el filetype
-"call pathogen#runtime_append_all_bundles()
-"call pathogen#helptags()
-syntax on                                         "colorear sintaxis
-filetype on                                       "volvemos a activar el filetype
-filetype plugin indent on                         "plugins adicionales para la indentacion
-
-
-
 " -----------------------------------------------------------
 " General
 " -----------------------------------------------------------
@@ -83,6 +68,7 @@ set smarttab autoindent
 " aspecto
 "--------------------------------------------------------------------------
 set columns=220                           "columnas
+syntax on                                 "colorear sintaxis
 set lines=150                             "filas
 "set textwidth=100 	                      "rompe autom. los 100 caracteres con un CRLF
 
@@ -114,14 +100,13 @@ endif
 " ------------------------------------------------------------------------
 "  Plugin:Vundle
 " ------------------------------------------------------------------------
+filetype off
 if has("win32")
   set rtp+=$HOME/vimfiles/bundle/Vundle.vim
 else
   set rtp+=~/.vim/bundle/Vundle.vim
 endif
-
 call vundle#begin()
-
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'bling/vim-airline'
 Plugin 'bling/vim-bufferline'
@@ -136,9 +121,8 @@ Plugin 'Syntastic'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'bronson/vim-visual-star-search'
-
 call vundle#end() 
-
+filetype plugin indent on
 
 " ------------------------------------------------------------------------
 "  Colorscheme:solarized
