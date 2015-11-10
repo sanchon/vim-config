@@ -96,12 +96,6 @@ if has("gui_running")                                       "El tipo de letra en
   endif
 endif
 
-if has("gui_running")
-  set background=dark
-  colorscheme solarized
-endif
-
-
 set number
 set ruler
 
@@ -120,7 +114,12 @@ endif
 " ------------------------------------------------------------------------
 "  Plugin:Vundle
 " ------------------------------------------------------------------------
-set rtp+=~/.vim/bundle/Vundle.vim
+if has("win32")
+  set rtp+=$HOME/vimfiles/bundle/Vundle.vim
+else
+  set rtp+=~/.vim/bundle/Vundle.vim
+endif
+
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
@@ -141,6 +140,9 @@ Plugin 'bronson/vim-visual-star-search'
 call vundle#end() 
 
 
+" ------------------------------------------------------------------------
+"  Colorscheme:solarized
+" ------------------------------------------------------------------------
 if has("gui_running")
   set background=dark
   colorscheme solarized
