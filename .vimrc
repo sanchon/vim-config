@@ -121,6 +121,8 @@ Plugin 'Syntastic'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'bronson/vim-visual-star-search'
+Plugin 'arecarn/selection.vim'
+Plugin 'arecarn/crunch.vim'
 call vundle#end() 
 filetype plugin indent on
 
@@ -138,6 +140,7 @@ endif
 source ~/.simplenoterc.vim
 "let g:SimplenoteListHeight=20
 let g:SimplenoteVertical=1
+let g:SimplenoteFiletype="markdown"
 
 
 " ------------------------------------------------------------------------
