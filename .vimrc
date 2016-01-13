@@ -138,10 +138,12 @@ endif
 "  Plugin:simplenote
 " ------------------------------------------------------------------------
 source ~/.simplenoterc.vim
-"let g:SimplenoteListHeight=20
+"let g:SimplenoteListHeight=500
 let g:SimplenoteVertical=1
 let g:SimplenoteFiletype="markdown"
-
+let g:SimplenoteSingleWindow=1
+"acceso directo a la nota de urls
+command Urls Simplenote -o dd41309e719f11e1a9ddb338ad94a326
 
 " ------------------------------------------------------------------------
 "  Plugin:matchit
