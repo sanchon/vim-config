@@ -8,7 +8,6 @@ if has("gui_running")
 endif
 set nowrap
 set clipboard=unnamed                             "para que se use siempre el registro * en lugar del unnamed
-set backspace=indent,eol,start                    "algunas veces no funciona
 
 
 "--------------------------------------------------------------------------
@@ -60,7 +59,6 @@ endif
 set tabstop=4
 set expandtab
 set shiftwidth=4
-set smarttab autoindent
 
 
 
@@ -83,12 +81,8 @@ if has("gui_running")                                       "El tipo de letra en
 endif
 
 set number
-set ruler
-
-set laststatus=2                          "siempre se muestra la 'statusline'
 
 set showcmd                               "muestra el comando en la statusline
-set wildmenu                              "autocompletado mejorado
 
 if has("win32")                           "si es windows, intentamos maximizar la ventana
   au GUIEnter * simalt ~x
@@ -107,6 +101,7 @@ else
   set rtp+=~/.vim/bundle/Vundle.vim
 endif
 call vundle#begin()
+Plugin 'tpope/vim-sensible'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'bling/vim-airline'
 Plugin 'bling/vim-bufferline'
@@ -124,7 +119,6 @@ Plugin 'bronson/vim-visual-star-search'
 Plugin 'arecarn/selection.vim'
 Plugin 'arecarn/crunch.vim'
 call vundle#end() 
-filetype plugin indent on
 
 " ------------------------------------------------------------------------
 "  Colorscheme:solarized
