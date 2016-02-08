@@ -91,6 +91,20 @@ endif
 
 
 
+"--------------------------------------------------------------------------
+" FTP AL HOST
+"
+" para hacer FTP lo lógico es esto:
+let g:netrw_ftpmode="ascii"
+"
+" usuario y password de ftp en fichero aparte
+source ~/.ftpuser.vim
+" 
+" FTP al host: así me ahorro el mvsp1 y las comillas al inicio y al final:
+command! -nargs=+ Host e ftp://mvsp1/\'<args>\'
+"--------------------------------------------------------------------------
+
+
 " ------------------------------------------------------------------------
 "  Plugin:Vundle
 " ------------------------------------------------------------------------
@@ -181,3 +195,9 @@ endif
 " ------------------------------------------------------------------------
 let g:pandoc#spell#enabled=0
 let g:pandoc#folding#level=20
+
+
+
+
+
+
