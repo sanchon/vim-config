@@ -97,11 +97,16 @@ endif
 " para hacer FTP lo lógico es esto:
 let g:netrw_ftpmode="ascii"
 "
-" usuario y password de ftp en fichero aparte
-source ~/.ftpuser.vim
+" usuario y password de ftp en fichero aparte, en windows. En otros sistemas
+" mejor usar .netrc
+let g:netrw_ftp_cmd= "ftp -s:" . $HOME . "\\MACHINE.ftp"
+" al hacer logon con el fichero salen mensajes en la ventana de mensajes... me
+" la cargo:
+let g:netrw_use_errorwindow =0
 " 
-" FTP al host: así me ahorro el mvsp1 y las comillas al inicio y al final:
+" FTPs al host: así me ahorro el mvsp1 y las comillas al inicio y al final:
 command! -nargs=+ Host e ftp://mvsp1/\'<args>\'
+command! -nargs=+ PLI e c:\temp\temp.pl1 | Nread ftp://mvsp1/'sys1.cage.fuentes(<args>)'
 "--------------------------------------------------------------------------
 
 
@@ -121,7 +126,9 @@ Plugin 'bling/vim-airline'
 Plugin 'bling/vim-bufferline'
 Plugin 'Solarized'
 Plugin 'EnhCommentify.vim'
-Plugin 'PLI-Tools'
+" --> Plugin 'PLI-Tools'
+Plugin 'sanchon/PLI-Tools'
+Plugin 'sanchon/jcl.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Gundo'
 Plugin 'The-NERD-tree'
