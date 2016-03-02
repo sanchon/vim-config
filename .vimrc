@@ -8,7 +8,6 @@ if has("gui_running")
 endif
 set nowrap
 set clipboard=unnamed                             "para que se use siempre el registro * en lugar del unnamed
-set backspace=indent,eol,start                    "algunas veces no funciona
 
 
 "--------------------------------------------------------------------------
@@ -60,7 +59,6 @@ endif
 set tabstop=4
 set expandtab
 set shiftwidth=4
-set smarttab autoindent
 
 
 
@@ -83,18 +81,33 @@ if has("gui_running")                                       "El tipo de letra en
 endif
 
 set number
-set ruler
-
-set laststatus=2                          "siempre se muestra la 'statusline'
 
 set showcmd                               "muestra el comando en la statusline
-set wildmenu                              "autocompletado mejorado
 
 if has("win32")                           "si es windows, intentamos maximizar la ventana
   au GUIEnter * simalt ~x
 endif
 "--------------------------------------------------------------------------
 
+
+
+"--------------------------------------------------------------------------
+" FTP AL HOST
+"
+" para hacer FTP lo lógico es esto:
+let g:netrw_ftpmode="ascii"
+"
+" usuario y password de ftp en fichero aparte, en windows. En otros sistemas
+" mejor usar .netrc
+let g:netrw_ftp_cmd= "ftp -s:" . $HOME . "\\MACHINE.ftp"
+" al hacer logon con el fichero salen mensajes en la ventana de mensajes... me
+" la cargo:
+let g:netrw_use_errorwindow =0
+" 
+" FTPs al host: así me ahorro el mvsp1 y las comillas al inicio y al final:
+command! -nargs=+ Host e ftp://mvsp1/\'<args>\'
+command! -nargs=+ PLI e c:\temp\temp.pl1 | Nread ftp://mvsp1/'sys1.cage.fuentes(<args>)'
+"--------------------------------------------------------------------------
 
 
 " ------------------------------------------------------------------------
@@ -107,12 +120,15 @@ else
   set rtp+=~/.vim/bundle/Vundle.vim
 endif
 call vundle#begin()
+Plugin 'tpope/vim-sensible'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'bling/vim-airline'
 Plugin 'bling/vim-bufferline'
 Plugin 'Solarized'
 Plugin 'EnhCommentify.vim'
-Plugin 'PLI-Tools'
+" --> Plugin 'PLI-Tools'
+Plugin 'sanchon/PLI-Tools'
+Plugin 'sanchon/jcl.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Gundo'
 Plugin 'The-NERD-tree'
@@ -127,7 +143,6 @@ Plugin 'klen/python-mode'
 Plugin 'vim-scripts/visSum.vim'
 Plugin 'yegappan/mru'
 call vundle#end() 
-filetype plugin indent on
 
 " ------------------------------------------------------------------------
 "  Colorscheme:solarized
@@ -141,10 +156,12 @@ endif
 "  Plugin:simplenote
 " ------------------------------------------------------------------------
 source ~/.simplenoterc.vim
-"let g:SimplenoteListHeight=20
+"let g:SimplenoteListHeight=500
 let g:SimplenoteVertical=1
 let g:SimplenoteFiletype="markdown"
-
+let g:SimplenoteSingleWindow=1
+"acceso directo a la nota de urls
+command Urls Simplenote -o dd41309e719f11e1a9ddb338ad94a326
 
 " ------------------------------------------------------------------------
 "  Plugin:matchit
@@ -188,3 +205,9 @@ endif
 " ------------------------------------------------------------------------
 let g:pandoc#spell#enabled=0
 let g:pandoc#folding#level=20
+
+
+
+
+
+
