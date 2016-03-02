@@ -49,9 +49,9 @@ if has("win32")                                  "en Windows... copy-paste con c
 endif
 
 
-if has("win32") || has("mac")                    "en Windows y Mac... el leader puede ser º (es como el \ pero sin altgr)
+"if has("win32") || has("mac")                    "en Windows y Mac... el leader puede ser º (es como el \ pero sin altgr)
     let mapleader="º"
-endif
+"endif
 
 
 "--------------------------------------------------------------------------
@@ -123,6 +123,9 @@ Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'bronson/vim-visual-star-search'
 Plugin 'arecarn/selection.vim'
 Plugin 'arecarn/crunch.vim'
+Plugin 'klen/python-mode'
+Plugin 'vim-scripts/visSum.vim'
+Plugin 'yegappan/mru'
 call vundle#end() 
 filetype plugin indent on
 
