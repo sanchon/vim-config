@@ -26,6 +26,7 @@ map <F8> :bn<CR>
 imap <F8> <Esc>:bn<CR>
 map <F7> :bp<CR>
 imap <F7> <Esc>:bp<CR>
+map <F5> :e<CR>G
 
 "para cambiar de tab rápidamente
 "-------------------------------
