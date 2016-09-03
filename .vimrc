@@ -133,7 +133,7 @@ Plugin 'sanchon/jcl.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Gundo'
 Plugin 'The-NERD-tree'
-Plugin 'simplenote.vim'
+Plugin 'mrtazz/simplenote.vim'
 Plugin 'Syntastic'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
@@ -143,6 +143,9 @@ Plugin 'arecarn/crunch.vim'
 Plugin 'klen/python-mode'
 Plugin 'vim-scripts/visSum.vim'
 Plugin 'yegappan/mru'
+Plugin 'ingo-library'
+Plugin 'clone'
+Plugin 'junegunn/vader.vim'
 call vundle#end() 
 
 " ------------------------------------------------------------------------
@@ -157,12 +160,13 @@ endif
 "  Plugin:simplenote
 " ------------------------------------------------------------------------
 source ~/.simplenoterc.vim
-"let g:SimplenoteListHeight=500
 let g:SimplenoteVertical=1
 let g:SimplenoteFiletype="markdown"
 let g:SimplenoteSingleWindow=1
+let g:SimplenoteListSize=45
 "acceso directo a la nota de urls
 command Urls Simplenote -o dd41309e719f11e1a9ddb338ad94a326
+command SN SimplenoteList <CR> vertical resize 35
 
 " ------------------------------------------------------------------------
 "  Plugin:matchit
