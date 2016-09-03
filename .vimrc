@@ -163,7 +163,7 @@ source ~/.simplenoterc.vim
 let g:SimplenoteVertical=1
 let g:SimplenoteFiletype="markdown"
 let g:SimplenoteSingleWindow=1
-let g:SimplenoteListSize=45
+let g:SimplenoteListSize=65
 "acceso directo a la nota de urls
 command Urls Simplenote -o dd41309e719f11e1a9ddb338ad94a326
 command SN SimplenoteList <CR> vertical resize 35
