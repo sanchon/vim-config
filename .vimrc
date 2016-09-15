@@ -126,7 +126,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'bling/vim-airline'
 Plugin 'bling/vim-bufferline'
 Plugin 'Solarized'
-Plugin 'EnhCommentify.vim'
+"Plugin 'EnhCommentify.vim'
+Plugin 'tomtom/tcomment_vim'
 " --> Plugin 'PLI-Tools'
 Plugin 'sanchon/PLI-Tools'
 Plugin 'sanchon/jcl.vim'
@@ -165,8 +166,8 @@ let g:SimplenoteFiletype="markdown"
 let g:SimplenoteSingleWindow=1
 let g:SimplenoteListSize=65
 "acceso directo a la nota de urls
-command Urls Simplenote -o dd41309e719f11e1a9ddb338ad94a326
-command SN SimplenoteList <CR> vertical resize 35
+command Urls SimplenoteOpen dd41309e719f11e1a9ddb338ad94a326
+command Todo SimplenoteOpen 1e3fc83d742311e69eb145bdf8915bee
 
 " ------------------------------------------------------------------------
 "  Plugin:matchit
