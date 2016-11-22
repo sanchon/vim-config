@@ -107,7 +107,8 @@ let g:netrw_use_errorwindow =0
 " 
 " FTPs al host: así me ahorro el mvsp1 y las comillas al inicio y al final:
 command! -nargs=+ Host e ftp://mvsp1/\'<args>\'
-command! -nargs=+ PLI e c:\temp\temp.pl1 | Nread ftp://mvsp1/'sys1.cage.fuentes(<args>)'
+command! -nargs=+ PLI e ftp://mvsp1/'sys1.cage.fuentes(<args>)' | setlocal filetype=pli
+command! -nargs=+ INC e ftp://mvsp1/'cage.maclib(<args>)' | setlocal filetype=pli
 "--------------------------------------------------------------------------
 
 
