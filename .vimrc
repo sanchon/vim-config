@@ -109,6 +109,9 @@ let g:netrw_use_errorwindow =0
 command! -nargs=+ Host e ftp://mvsp1/\'<args>\'
 command! -nargs=+ PLI e ftp://mvsp1/'sys1.cage.fuentes(<args>)' | setlocal filetype=pli
 command! -nargs=+ INC e ftp://mvsp1/'cage.maclib(<args>)' | setlocal filetype=pli
+command! -nargs=+ JCL e ftp://mvsp1/'sys1.cage.jcllib(<args>)' | setlocal filetype=jcl
+command! -nargs=+ JCLD e ftp://mvsp1/'sys1.cage.jcllib(<args>)' | setlocal filetype=sh
+command! -nargs=+ FILE e ftp://mvse1/'<args>'
 "--------------------------------------------------------------------------
 
 
@@ -167,8 +170,8 @@ let g:SimplenoteFiletype="markdown"
 let g:SimplenoteSingleWindow=1
 let g:SimplenoteListSize=65
 "acceso directo a la nota de urls
-command Urls SimplenoteOpen dd41309e719f11e1a9ddb338ad94a326
-command Todo SimplenoteOpen 1e3fc83d742311e69eb145bdf8915bee
+command! Urls SimplenoteOpen dd41309e719f11e1a9ddb338ad94a326
+command! Todo SimplenoteOpen 1e3fc83d742311e69eb145bdf8915bee
 
 " ------------------------------------------------------------------------
 "  Plugin:matchit
