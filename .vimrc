@@ -107,7 +107,11 @@ let g:netrw_use_errorwindow =0
 " 
 " FTPs al host: así me ahorro el mvsp1 y las comillas al inicio y al final:
 command! -nargs=+ Host e ftp://mvsp1/\'<args>\'
-command! -nargs=+ PLI e c:\temp\temp.pl1 | Nread ftp://mvsp1/'sys1.cage.fuentes(<args>)'
+command! -nargs=+ PLI e ftp://mvsp1/'sys1.cage.fuentes(<args>)' | setlocal filetype=pli
+command! -nargs=+ INC e ftp://mvsp1/'cage.maclib(<args>)' | setlocal filetype=pli
+command! -nargs=+ JCL e ftp://mvsp1/'sys1.cage.jcllib(<args>)' | setlocal filetype=jcl
+command! -nargs=+ JCLD e ftp://mvsp1/'sys1.cage.jcllib(<args>)' | setlocal filetype=sh
+command! -nargs=+ FILE e ftp://mvse1/'<args>'
 "--------------------------------------------------------------------------
 
 
@@ -126,7 +130,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'bling/vim-airline'
 Plugin 'bling/vim-bufferline'
 Plugin 'Solarized'
-Plugin 'EnhCommentify.vim'
+"Plugin 'EnhCommentify.vim'
+Plugin 'tomtom/tcomment_vim'
 " --> Plugin 'PLI-Tools'
 Plugin 'sanchon/PLI-Tools'
 Plugin 'sanchon/jcl.vim'
@@ -166,8 +171,8 @@ let g:SimplenoteFiletype="markdown"
 let g:SimplenoteSingleWindow=1
 let g:SimplenoteListSize=65
 "acceso directo a la nota de urls
-command Urls Simplenote -o dd41309e719f11e1a9ddb338ad94a326
-command SN SimplenoteList <CR> vertical resize 35
+command! Urls SimplenoteOpen dd41309e719f11e1a9ddb338ad94a326
+command! Todo SimplenoteOpen 1e3fc83d742311e69eb145bdf8915bee
 
 " ------------------------------------------------------------------------
 "  Plugin:matchit
