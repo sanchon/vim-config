@@ -146,6 +146,7 @@ Plugin 'yegappan/mru'
 Plugin 'ingo-library'
 Plugin 'clone'
 Plugin 'junegunn/vader.vim'
+Plugin 'trevordmiller/nova-vim'
 call vundle#end() 
 
 " ------------------------------------------------------------------------
@@ -153,7 +154,7 @@ call vundle#end()
 " ------------------------------------------------------------------------
 if has("gui_running")
   set background=dark
-  colorscheme solarized
+  colorscheme nova
 endif
 
 " ------------------------------------------------------------------------
