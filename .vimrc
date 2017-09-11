@@ -50,7 +50,8 @@ endif
 
 
 "if has("win32") || has("mac")                    "en Windows y Mac... el leader puede ser º (es como el \ pero sin altgr)
-    let mapleader="º"
+    " let mapleader="º"
+    let mapleader=" "
 "endif
 
 
@@ -152,6 +153,8 @@ Plugin 'ingo-library'
 Plugin 'clone'
 Plugin 'junegunn/vader.vim'
 Plugin 'trevordmiller/nova-vim'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'thinca/vim-fontzoom'
 call vundle#end() 
 
 " ------------------------------------------------------------------------
@@ -159,7 +162,7 @@ call vundle#end()
 " ------------------------------------------------------------------------
 if has("gui_running")
   set background=dark
-  colorscheme nova
+  colorscheme solarized
 endif
 
 " ------------------------------------------------------------------------
@@ -173,6 +176,7 @@ let g:SimplenoteListSize=65
 "acceso directo a la nota de urls
 command! Urls SimplenoteOpen dd41309e719f11e1a9ddb338ad94a326
 command! Todo SimplenoteOpen 1e3fc83d742311e69eb145bdf8915bee
+command! Passwords SimplenoteOpen 31d54c45e2ef11e4a0a6bdec9b00c108 
 
 " ------------------------------------------------------------------------
 "  Plugin:matchit
