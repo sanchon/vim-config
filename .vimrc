@@ -35,7 +35,6 @@ imap <C-Tab> <Esc>:tabnext<CR>
 map <C-S-Tab> :tabprevious<CR>
 imap <C-S-Tab> <Esc>:tabprevious<CR>
 
-
 if has("win32")                                  "en Windows... copy-paste con ctrl-c y ctrl-v
     if has("gui_running")
         " ---- Windows Like Copy-Paste keys ----
@@ -47,7 +46,6 @@ if has("win32")                                  "en Windows... copy-paste con c
         vnoremap <C-c> "*y
     endif
 endif
-
 
 "if has("win32") || has("mac")                    "en Windows y Mac... el leader puede ser º (es como el \ pero sin altgr)
     " let mapleader="º"
@@ -83,12 +81,15 @@ if has("gui_running")                                       "El tipo de letra en
 endif
 
 set number
+set relativenumber
 
 set showcmd                               "muestra el comando en la statusline
 
 if has("win32")                           "si es windows, intentamos maximizar la ventana
   au GUIEnter * simalt ~x
 endif
+
+set listchars=tab:→\ ,trail:·,precedes:«,extends:»,eol:¶,space:·
 "--------------------------------------------------------------------------
 
 
@@ -220,9 +221,6 @@ endif
 " ------------------------------------------------------------------------
 let g:pandoc#spell#enabled=0
 let g:pandoc#folding#level=20
-
-
-
 
 
 
