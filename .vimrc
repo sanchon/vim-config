@@ -80,7 +80,6 @@ if has("gui_running")                                       "El tipo de letra en
   endif
 endif
 
-set number
 set relativenumber
 
 set showcmd                               "muestra el comando en la statusline
@@ -129,10 +128,9 @@ endif
 call vundle#begin()
 Plugin 'tpope/vim-sensible'
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
 Plugin 'bling/vim-bufferline'
 Plugin 'Solarized'
-"Plugin 'EnhCommentify.vim'
 Plugin 'tomtom/tcomment_vim'
 " --> Plugin 'PLI-Tools'
 Plugin 'sanchon/PLI-Tools'
@@ -213,6 +211,7 @@ map <leader>g :GundoToggle<CR>
 if has("gui_running")
     let g:airline_powerline_fonts=1  "(estos simbolitos no funcionan en la shell)
 endif
+let g:airline#extensions#branch#enabled = 0
 
 
 
