@@ -65,6 +65,7 @@ set shiftwidth=4
 "--------------------------------------------------------------------------
 " aspecto
 "--------------------------------------------------------------------------
+set number
 set columns=220                           "columnas
 syntax on                                 "colorear sintaxis
 set lines=150                             "filas
@@ -132,7 +133,6 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'bling/vim-bufferline'
 Plugin 'Solarized'
 Plugin 'tomtom/tcomment_vim'
-" --> Plugin 'PLI-Tools'
 Plugin 'sanchon/PLI-Tools'
 Plugin 'sanchon/jcl.vim'
 Plugin 'tpope/vim-fugitive'
@@ -144,25 +144,20 @@ Plugin 'Syntastic'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'bronson/vim-visual-star-search'
-Plugin 'arecarn/selection.vim'
-Plugin 'arecarn/crunch.vim'
 Plugin 'klen/python-mode'
 Plugin 'vim-scripts/visSum.vim'
 Plugin 'yegappan/mru'
-Plugin 'ingo-library'
-Plugin 'clone'
-Plugin 'junegunn/vader.vim'
-Plugin 'trevordmiller/nova-vim'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'thinca/vim-fontzoom'
+Plugin 'flazz/vim-colorschemes'
+" Plugin 'xolox/vim-colorscheme-switcher'
 call vundle#end() 
 
 " ------------------------------------------------------------------------
-"  Colorscheme:solarized
+"  Colorscheme
 " ------------------------------------------------------------------------
 if has("gui_running")
-  set background=dark
-  colorscheme solarized
+  colorscheme tchaba
 endif
 
 " ------------------------------------------------------------------------
@@ -178,10 +173,6 @@ command! Urls SimplenoteOpen dd41309e719f11e1a9ddb338ad94a326
 command! Todo SimplenoteOpen 1e3fc83d742311e69eb145bdf8915bee
 command! Passwords SimplenoteOpen 31d54c45e2ef11e4a0a6bdec9b00c108 
 
-" ------------------------------------------------------------------------
-"  Plugin:matchit
-" ------------------------------------------------------------------------
-"runtime macros/matchit.vim
 
 
 " ------------------------------------------------------------------------
@@ -195,15 +186,6 @@ map <leader>n :NERDTreeToggle<CR>
 " ------------------------------------------------------------------------
 map <leader>g :GundoToggle<CR>
 
-
-" ------------------------------------------------------------------------
-"  Plugin:Supertab
-" ------------------------------------------------------------------------
-"au FileType python set omnifunc=pythoncomplete#Complete
-"let g:SuperTabDefaultCompletionType = "context"
-"let g:SuperTabMappingForward = '<c-space>'		" el tabulador es demasiado agresivo
-"let g:SuperTabMappingBackward = '<s-c-space>'
-"set completeopt=menuone,longest,preview
 
 
 " ------------------------------------------------------------------------
