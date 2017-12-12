@@ -66,9 +66,11 @@ set shiftwidth=4
 " aspecto
 "--------------------------------------------------------------------------
 set number
-set columns=220                           "columnas
 syntax on                                 "colorear sintaxis
-set lines=150                             "filas
+if has("gui_running")
+    set columns=220                           "columnas
+    set lines=150                             "filas
+endif
 "set textwidth=100 	                      "rompe autom. los 100 caracteres con un CRLF
 
 if has("gui_running")                                       "El tipo de letra en una gui...
