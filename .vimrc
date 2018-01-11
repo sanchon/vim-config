@@ -144,7 +144,7 @@ call vundle#begin()
 Plugin 'tpope/vim-sensible'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
-Plugin 'bling/vim-bufferline'
+" Plugin 'bling/vim-bufferline'
 Plugin 'Solarized'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'sanchon/PLI-Tools'
@@ -209,7 +209,8 @@ if has("gui_running")
     let g:airline_powerline_fonts=1  "(estos simbolitos no funcionan en la shell)
 endif
 let g:airline#extensions#branch#enabled = 0
-
+let g:bufferline_echo = 0
+let g:airline#extensions#tabline#enabled = 1
 
 
 " ------------------------------------------------------------------------
