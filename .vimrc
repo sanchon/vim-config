@@ -118,7 +118,10 @@ command! -nargs=+ JCLD e ftp://mvsp1/'sys1.cage.jcllib(<args>)' | setlocal filet
 command! -nargs=+ FILE e ftp://mvse1/'<args>'
 "--------------------------------------------------------------------------
 
-
+"--------------------------------------------------------------------------
+" gx abre URLs con parametros 
+let g:netrw_gx="<cWORD>"
+"--------------------------------------------------------------------------
 
 "--------------------------------------------------------------------------
 " Limpiar un JSON fácilmente
@@ -126,8 +129,11 @@ command! LimpiarJSON %!python -m json.tool
 "--------------------------------------------------------------------------
 
 
-
-
+"--------------------------------------------------------------------------
+" En VISUAL si pulsas ":" se lleva el texto seleccionado a la linea de
+" comandos
+vnoremap : y:<C-r>"<C-b>
+"--------------------------------------------------------------------------
 
 
 
@@ -211,6 +217,7 @@ endif
 let g:airline#extensions#branch#enabled = 0
 let g:bufferline_echo = 0
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 
 
 " ------------------------------------------------------------------------
