@@ -150,7 +150,6 @@ call vundle#begin()
 Plugin 'tpope/vim-sensible'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
-" Plugin 'bling/vim-bufferline'
 Plugin 'Solarized'
 Plugin 'tomtom/tcomment_vim'
 Plugin 'sanchon/PLI-Tools'
@@ -170,7 +169,6 @@ Plugin 'yegappan/mru'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'thinca/vim-fontzoom'
 Plugin 'flazz/vim-colorschemes'
-" Plugin 'xolox/vim-colorscheme-switcher'
 call vundle#end() 
 
 " ------------------------------------------------------------------------
@@ -228,4 +226,9 @@ let g:pandoc#folding#level=20
 
 
 
-
+" ------------------------------------------------------------------------
+"  Plugin: Fontzoom
+" ------------------------------------------------------------------------
+let g:fontzoom_no_default_key_mappings = 1 "por defecto son + y -
+map <leader>+ <plug>(fontzoom-larger)
+map <leader>- <plug>(fontzoom-smaller)
