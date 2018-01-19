@@ -156,6 +156,7 @@ Plugin 'sanchon/PLI-Tools'
 Plugin 'sanchon/jcl.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rhubarb'
+Plugin 'tpope/vim-capslock'
 Plugin 'Gundo'
 Plugin 'The-NERD-tree'
 Plugin 'mrtazz/simplenote.vim'
@@ -216,12 +217,15 @@ let g:airline#extensions#branch#enabled = 0
 let g:bufferline_echo = 0
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+let g:airline_section_b =airline#section#create_left(['%{CapsLockStatusline()}'])
+
 
 
 " ------------------------------------------------------------------------
 "  Plugin: Pandoc
 " ------------------------------------------------------------------------
 let g:pandoc#spell#enabled=0
+let g:pandoc#keyboard#enabled=1
 let g:pandoc#folding#level=20
 
 
