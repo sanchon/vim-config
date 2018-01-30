@@ -138,13 +138,15 @@ vnoremap : y:<C-r>"<C-b>
 
 
 " ------------------------------------------------------------------------
-"  Plugin:Vundle
+"  Plugin:Vundle y misChuletas
 " ------------------------------------------------------------------------
 filetype off
 if has("win32")
   set rtp+=$HOME/vimfiles/bundle/Vundle.vim
+  set rtp+=$HOME/vimfiles/bundle/misChuletas/
 else
   set rtp+=~/.vim/bundle/Vundle.vim
+  set rtp+=~/.vim/bundle/misChuletas/
 endif
 call vundle#begin()
 Plugin 'tpope/vim-sensible'
@@ -227,6 +229,8 @@ let g:airline_section_b =airline#section#create_left(['%{CapsLockStatusline()}']
 let g:pandoc#spell#enabled=0
 let g:pandoc#keyboard#enabled=1
 let g:pandoc#folding#level=20
+let g:pandoc#filetypes#handled = ["extra","pandoc","markdown"]
+
 
 
 

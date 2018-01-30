@@ -1,0 +1,45 @@
+*misChuletas.txt*   Para Vim version 8.0 Último cambio: 2018-01-30
+*misChuletas*
+
+Snippets y cosas de vim que suelo usar y no recuerdo. 
+Hugo Sanchón 2018.
+
+===============================================================================
+CONTENIDOS
+
+    1. Links.............................................|misChuletas-links|
+    2. Buscar y Reemplazar...............................|misChuletas-buscar|
+    3. Modificar Líneas Masivamente......................|misChuletas-modificarLineas|
+    4. Otros.............................................|misChuletas-otros|
+
+===============================================================================
+1. Links                                                    *misChuletas-links*
+
+   - gx : Abrir Link 
+
+===============================================================================
+2. Buscar y Reemplazar                                     *misChuletas-buscar*
+
+   - :%s/foo/bar/g : Find each occurrence of 'foo', and replace it with 'bar'.
+   - :%s/foo/bar/gc : change each 'foo' to 'bar', but ask for confirmation first.
+   - :%s/\<foo\>/bar/gc : Change only whole words exactly matching 'foo' to 'bar'; ask for confirmation.
+   - :%s/foo/bar/gci : Change each 'foo' (case insensitive) to 'bar'; ask for confirmation.
+        This may be wanted after using :set noignorecase to make searches case sensitive (the default).
+   - :%s/foo/bar/gcI : Change each 'foo' (case sensitive) to 'bar'; ask for confirmation.
+        This may be wanted after using :set ignorecase to make searches case insensitive.
+
+
+===============================================================================
+3. Modificar Líneas Masivamente                   *misChuletas-modificarLineas*
+
+   - :g/textoabuscar/d : Borra todas las lineas que contengan "textoabuscar"
+   - :%s/$/\=repeat(' ',64-virtcol('$')) : Concatenar espacios al final
+
+
+
+==============================================================================
+4. Otros                                                   *misChuletas-otros* 
+    - "_d : Borrar sin copiar (black hole register)
+    - gq (en modo visual) : Formatear ancho de las líneas
+
+
