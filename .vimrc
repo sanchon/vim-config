@@ -71,7 +71,7 @@ if has("gui_running")
     set columns=220                           "columnas
     set lines=150                             "filas
 endif
-"set textwidth=100 	                      "rompe autom. los 100 caracteres con un CRLF
+set textwidth=0 	                      "rompe autom. a los X caracteres con un CRLF
 
 if has("gui_running")                                       "El tipo de letra en una gui...
   if has("gui_macvim")                                      " |
@@ -172,6 +172,7 @@ Plugin 'yegappan/mru'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'thinca/vim-fontzoom'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'airblade/vim-gitgutter'
 call vundle#end() 
 
 " ------------------------------------------------------------------------
@@ -230,7 +231,8 @@ let g:pandoc#spell#enabled=0
 let g:pandoc#keyboard#enabled=1
 let g:pandoc#folding#level=20
 let g:pandoc#filetypes#handled = ["extra","pandoc","markdown"]
-
+let g:pandoc#command#templates_file = split(&runtimepath, ",")[0]."/vim-pandoc-templates"
+command! PandocAutoEjecutarMyRevealJsWeb let g:pandoc#command#autoexec_command = "Pandoc #myRevealJsWeb" | let g:pandoc#command#autoexec_on_writes = 1
 
 
 
