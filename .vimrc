@@ -201,6 +201,7 @@ command! Passwords SimplenoteOpen 31d54c45e2ef11e4a0a6bdec9b00c108
 "  Plugin:NerdTree
 " ------------------------------------------------------------------------
 map <leader>n :NERDTreeToggle<CR>
+map <leader>N :NERDTreeFind<CR>
 
 
 " ------------------------------------------------------------------------
