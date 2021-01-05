@@ -1,5 +1,5 @@
 *misChuletas.txt*   Para Vim version 8.0 Último cambio: 2018-01-30
-*misChuletas*
+*misChuletas de Vim*
 
 Snippets y cosas de vim que suelo usar y no recuerdo. 
 Hugo Sanchón 2018.
