@@ -228,11 +228,11 @@ map <leader>g :GundoToggle<CR>
 if has("gui_running")
     let g:airline_powerline_fonts=1  "(estos simbolitos no funcionan en la shell)
 endif
-let g:airline#extensions#branch#enabled = 0
-let g:bufferline_echo = 0
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
-let g:airline_section_b =airline#section#create_left(['%{CapsLockStatusline()}'])
+" let g:airline#extensions#branch#enabled = 1
+" let g:bufferline_echo = 0
+" let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+" let g:airline_section_b =airline#section#create_left(['%{CapsLockStatusline()}'])
 
 
 
@@ -287,5 +287,10 @@ let g:preview_markdown_auto_update = 1
 " ------------------------------------------------------------------------
 "  Plugin: vimwiki
 " ------------------------------------------------------------------------
-let g:vimwiki_list = [{'path':'~/notas', 'syntax':'markdown', 'ext': '.md'}]
-
+let g:vimwiki_list = [{
+   \ 'path':'~\notas', 
+   \ 'syntax':'markdown', 
+   \ 'ext': '.md',
+\}]
+let g:vimwiki_global_ext = 0
+let g:vimwiki_markdown_link_ext = 1
