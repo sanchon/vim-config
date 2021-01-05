@@ -4,7 +4,7 @@
 set nocompatible                                  "funciones avanzadas
 set encoding=utf-8                                "otra opcion es latin1
 if has("gui_running")
-    set guioptions=abegmrLtT
+    set guioptions=ae
 endif
 set nowrap
 set clipboard=unnamed                             "para que se use siempre el registro * en lugar del unnamed
@@ -50,6 +50,7 @@ endif
 "if has("win32") || has("mac")                    "en Windows y Mac... el leader puede ser º (es como el \ pero sin altgr)
     " let mapleader="º"
     let mapleader=" "
+    let maplocalleader=" "
 "endif
 
 
@@ -92,6 +93,11 @@ if has("win32")                           "si es windows, intentamos maximizar l
 endif
 
 set listchars=tab:→\ ,trail:·,precedes:«,extends:»,eol:¶,space:·
+
+set foldmethod=syntax
+set nofoldenable
+
+
 "--------------------------------------------------------------------------
 
 
@@ -149,6 +155,7 @@ else
   set rtp+=~/.vim/bundle/misChuletas/
 endif
 call vundle#begin()
+Plugin 'junegunn/fzf'
 Plugin 'tpope/vim-sensible'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
@@ -167,12 +174,16 @@ Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'bronson/vim-visual-star-search'
 Plugin 'klen/python-mode'
-Plugin 'vim-scripts/visSum.vim'
 Plugin 'yegappan/mru'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'thinca/vim-fontzoom'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'sk1418/HowMuch'
+Plugin 'dbeniamine/todo.txt-vim'
+Plugin 'vifm/vifm.vim'
+Plugin 'skanehira/preview-markdown.vim'
+Plugin 'vimwiki/vimwiki'
 call vundle#end() 
 
 " ------------------------------------------------------------------------
@@ -196,13 +207,13 @@ command! Todo SimplenoteOpen 1e3fc83d742311e69eb145bdf8915bee
 command! Passwords SimplenoteOpen 31d54c45e2ef11e4a0a6bdec9b00c108 
 
 
-
 " ------------------------------------------------------------------------
 "  Plugin:NerdTree
 " ------------------------------------------------------------------------
 map <leader>n :NERDTreeToggle<CR>
 map <leader>N :NERDTreeFind<CR>
-
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
 
 " ------------------------------------------------------------------------
 "  Plugin:Gundo
@@ -231,7 +242,7 @@ let g:airline_section_b =airline#section#create_left(['%{CapsLockStatusline()}']
 let g:pandoc#spell#enabled=0
 let g:pandoc#keyboard#enabled=1
 let g:pandoc#folding#level=20
-let g:pandoc#filetypes#handled = ["extra","pandoc","markdown"]
+let g:pandoc#filetypes#handled = ["pandoc","markdown"]
 let g:pandoc#command#templates_file = split(&runtimepath, ",")[0]."/vim-pandoc-templates"
 command! PandocAutoEjecutarMyRevealJsWeb let g:pandoc#command#autoexec_command = "Pandoc #myRevealJsWeb" | let g:pandoc#command#autoexec_on_writes = 1
 
@@ -243,3 +254,38 @@ command! PandocAutoEjecutarMyRevealJsWeb let g:pandoc#command#autoexec_command =
 let g:fontzoom_no_default_key_mappings = 1 "por defecto son + y -
 map <leader>+ <plug>(fontzoom-larger)
 map <leader>- <plug>(fontzoom-smaller)
+
+
+
+" ------------------------------------------------------------------------
+"  Plugin: AutoCalc
+" ------------------------------------------------------------------------
+vmap <leader>= <Plug>AutoCalcAppendWithEq 
+vmap <leader>== <Plug>AutoCalcAppendWithEqAndSum :%s/Sum\ \ /Total <CR>
+
+
+" ------------------------------------------------------------------------
+"  Plugin: Todo.txt-vim
+" ------------------------------------------------------------------------
+" activar el autocompletado de proyectos y contextos
+au filetype todo setlocal omnifunc=todo#Complete
+" Auto completar proyectos
+au filetype todo imap <buffer> + +<C-X><C-O>
+" Auto completar contextos
+au filetype todo imap <buffer> @ @<C-X><C-O>
+
+
+
+
+" ------------------------------------------------------------------------
+"  Plugin: Preview-Markdown
+" ------------------------------------------------------------------------
+let g:preview_markdown_vertical = 1
+let g:preview_markdown_auto_update = 1
+
+
+" ------------------------------------------------------------------------
+"  Plugin: vimwiki
+" ------------------------------------------------------------------------
+let g:vimwiki_list = [{'path':'~/notas', 'syntax':'markdown', 'ext': '.md'}]
+

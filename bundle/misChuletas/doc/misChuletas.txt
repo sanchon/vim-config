@@ -7,15 +7,28 @@ Hugo Sanchón 2018.
 ===============================================================================
 CONTENIDOS
 
-    1. Links.............................................|misChuletas-links|
+    1. todo.txt..........................................|misChuletas-todo.txt|
     2. Buscar y Reemplazar...............................|misChuletas-buscar|
     3. Modificar Líneas Masivamente......................|misChuletas-modificarLineas|
     4. Otros.............................................|misChuletas-otros|
 
 ===============================================================================
-1. Links                                                    *misChuletas-links*
+1. todo.tx                                               *misChuletas-todo.txt*
 
-   - gx : Abrir Link 
+   - Ordenar: 
+      * (s)   prioridad 
+      * (s+)  proyectos
+      * (s@)  contextos
+      * (sd)  por fecha tope
+
+   - Priorizar:
+      * (j,k) bajar,subir
+      * (a,b,c) prioridad a, b, c
+
+   - Listo:
+      * (x)  completar
+      * (C)  cancelar
+      * (D)  mover a done.txt las completadas
 
 ===============================================================================
 2. Buscar y Reemplazar                                     *misChuletas-buscar*
