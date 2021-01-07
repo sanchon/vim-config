@@ -124,10 +124,8 @@ command! -nargs=+ JCLD e ftp://mvsp1/'sys1.cage.jcllib(<args>)' | setlocal filet
 command! -nargs=+ FILE e ftp://mvse1/'<args>'
 "--------------------------------------------------------------------------
 
-"--------------------------------------------------------------------------
-" gx abre URLs con parametros 
-let g:netrw_gx="<cWORD>"
-"--------------------------------------------------------------------------
+
+
 
 "--------------------------------------------------------------------------
 " Limpiar un JSON fácilmente
@@ -184,6 +182,7 @@ Plugin 'dbeniamine/todo.txt-vim'
 Plugin 'vifm/vifm.vim'
 Plugin 'skanehira/preview-markdown.vim'
 Plugin 'vimwiki/vimwiki'
+Plugin 'dhruvasagar/vim-open-url'
 call vundle#end() 
 
 " ------------------------------------------------------------------------
@@ -230,8 +229,8 @@ if has("gui_running")
 endif
 " let g:airline#extensions#branch#enabled = 1
 " let g:bufferline_echo = 0
-" let g:airline#extensions#tabline#enabled = 1
-" let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 " let g:airline_section_b =airline#section#create_left(['%{CapsLockStatusline()}'])
 
 
@@ -294,3 +293,12 @@ let g:vimwiki_list = [{
 \}]
 let g:vimwiki_global_ext = 0
 let g:vimwiki_markdown_link_ext = 1
+let g:vimwiki_url_maxsave=0
+
+
+" ------------------------------------------------------------------------
+"  Plugin: vim-open-url
+" ------------------------------------------------------------------------
+nmap gb <Plug>(open-url-browser)
+xmap gb <Plug>(open-url-browser)
+
