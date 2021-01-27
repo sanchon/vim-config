@@ -146,46 +146,44 @@ vnoremap : y:<C-r>"<C-b>
 " ------------------------------------------------------------------------
 "  Plugin:Vundle y misChuletas
 " ------------------------------------------------------------------------
-filetype off
-if has("win32")
-  set rtp+=$HOME/vimfiles/bundle/Vundle.vim
-  set rtp+=$HOME/vimfiles/bundle/misChuletas/
-else
-  set rtp+=~/.vim/bundle/Vundle.vim
-  set rtp+=~/.vim/bundle/misChuletas/
-endif
-call vundle#begin()
-Plugin 'junegunn/fzf'
-Plugin 'tpope/vim-sensible'
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'Solarized'
-Plugin 'tomtom/tcomment_vim'
-Plugin 'sanchon/PLI-Tools'
-Plugin 'sanchon/jcl.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-rhubarb'
-Plugin 'tpope/vim-capslock'
-Plugin 'Gundo'
-Plugin 'The-NERD-tree'
-Plugin 'mrtazz/simplenote.vim'
-Plugin 'Syntastic'
-Plugin 'vim-pandoc/vim-pandoc'
-Plugin 'vim-pandoc/vim-pandoc-syntax'
-Plugin 'bronson/vim-visual-star-search'
-Plugin 'klen/python-mode'
-Plugin 'yegappan/mru'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'thinca/vim-fontzoom'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'sk1418/HowMuch'
-Plugin 'dbeniamine/todo.txt-vim'
-Plugin 'vifm/vifm.vim'
-Plugin 'skanehira/preview-markdown.vim'
-Plugin 'vimwiki/vimwiki'
-Plugin 'dhruvasagar/vim-open-url'
-call vundle#end() 
+" filetype off
+" if has("win32")
+"   set rtp+=$HOME/vimfiles/bundle/misChuletas/
+" else
+"   set rtp+=~/.vim/bundle/misChuletas/
+" endif
+"
+"
+call plug#begin('~/.vim/plugged')
+Plug 'junegunn/fzf'
+Plug 'sanchon/misChuletas'
+Plug 'tpope/vim-sensible'
+Plug 'vim-airline/vim-airline'
+Plug 'tomtom/tcomment_vim'
+Plug 'sanchon/PLI-Tools'
+Plug 'sanchon/jcl.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
+Plug 'tpope/vim-capslock'
+Plug 'mbbill/undotree'
+Plug 'preservim/nerdtree'
+Plug 'vim-syntastic/syntastic'
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'bronson/vim-visual-star-search'
+Plug 'klen/python-mode'
+Plug 'yegappan/mru'
+Plug 'easymotion/vim-easymotion'
+Plug 'thinca/vim-fontzoom'
+Plug 'flazz/vim-colorschemes'
+Plug 'airblade/vim-gitgutter'
+Plug 'sk1418/HowMuch'
+Plug 'dbeniamine/todo.txt-vim'
+Plug 'vifm/vifm.vim'
+Plug 'skanehira/preview-markdown.vim'
+Plug 'vimwiki/vimwiki'
+Plug 'dhruvasagar/vim-open-url'
+call plug#end()
 
 " ------------------------------------------------------------------------
 "  Colorscheme
