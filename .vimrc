@@ -39,7 +39,7 @@ if has("win32")                                  "en Windows... copy-paste con c
     if has("gui_running")
         " ---- Windows Like Copy-Paste keys ----
         " CTRL-v is paste
-        inoremap <C-v> <esc>"*p<return>i
+        inoremap <C-v> <esc>"*pa
         " CTRL-x is cut (in visual mode only)
         vnoremap <C-x> "*d
         " CTRL-c is copy (in visual mode only)
@@ -78,7 +78,8 @@ if has("gui_running")                                       "El tipo de letra en
   if has("gui_macvim")                                      " |
     set guifont=Ubuntu\ Mono\ derivative\ Powerline:h12     " ---en Mac OS X
   elseif has("win32")                                       " |
-    set guifont=Ubuntu_Mono_derivative_Powerlin:h9:cANSI  " ---en Windows
+    " set guifont=Ubuntu_Mono_derivative_Powerlin:h9:cANSI  " ---en Windows
+    set guifont=Fira\ Code\ Medium:h10:cANSI  " ---en Windows
   else                                                      " |
     set guifont=Droid\ Sans\ Mono\ 8                        " ·--elsewhere
   endif
@@ -97,7 +98,8 @@ set listchars=tab:→\ ,trail:·,precedes:«,extends:»,eol:¶,space:·
 set foldmethod=syntax
 set nofoldenable
 
-
+set renderoptions=type:directx
+set encoding=utf-8
 "--------------------------------------------------------------------------
 
 
