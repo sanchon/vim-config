@@ -144,16 +144,8 @@ vnoremap : y:<C-r>"<C-b>
 
 
 " ------------------------------------------------------------------------
-"  Plugin:Vundle y misChuletas
+"  Plugin: vim-plug
 " ------------------------------------------------------------------------
-" filetype off
-" if has("win32")
-"   set rtp+=$HOME/vimfiles/bundle/misChuletas/
-" else
-"   set rtp+=~/.vim/bundle/misChuletas/
-" endif
-"
-"
 call plug#begin('~/.vim/plugged')
 Plug 'junegunn/fzf'
 Plug 'sanchon/misChuletas'
