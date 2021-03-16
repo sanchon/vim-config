@@ -184,19 +184,6 @@ if has("gui_running")
   colorscheme tchaba
 endif
 
-" ------------------------------------------------------------------------
-"  Plugin:simplenote
-" ------------------------------------------------------------------------
-source ~/.simplenoterc.vim
-let g:SimplenoteVertical=1
-let g:SimplenoteFiletype="markdown"
-let g:SimplenoteSingleWindow=1
-let g:SimplenoteListSize=65
-"acceso directo a la nota de urls
-command! Urls SimplenoteOpen dd41309e719f11e1a9ddb338ad94a326
-command! Todo SimplenoteOpen 1e3fc83d742311e69eb145bdf8915bee
-command! Passwords SimplenoteOpen 31d54c45e2ef11e4a0a6bdec9b00c108 
-
 
 " ------------------------------------------------------------------------
 "  Plugin:NerdTree
