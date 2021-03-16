@@ -249,10 +249,11 @@ map <leader>- <plug>(fontzoom-smaller)
 
 
 " ------------------------------------------------------------------------
-"  Plugin: AutoCalc
+"  Plugin: HowMuch
 " ------------------------------------------------------------------------
 vmap <leader>= <Plug>AutoCalcAppendWithEq 
-vmap <leader>== <Plug>AutoCalcAppendWithEqAndSum :%s/Sum\ \ /Total <CR>
+vmap <leader>== <Plug>AutoCalcAppendWithSum 
+vmap <leader>=== <Plug>AutoCalcAppendWithEqAndSum 
 
 
 " ------------------------------------------------------------------------
