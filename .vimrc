@@ -40,6 +40,7 @@ if has("win32")                                  "en Windows... copy-paste con c
         " ---- Windows Like Copy-Paste keys ----
         " CTRL-v is paste
         inoremap <C-v> <esc>"*pa
+        cnoremap <C-v> <C-r>*
         " CTRL-x is cut (in visual mode only)
         vnoremap <C-x> "*d
         " CTRL-c is copy (in visual mode only)
