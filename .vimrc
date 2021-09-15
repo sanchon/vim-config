@@ -19,14 +19,18 @@ if has("gui_running")
     set autochdir                                "cambia el directorio actual al del fichero abierto
 endif
 
-"para cambiar de buffer rápidamente
+"teclas de funcion: gestion de buffers
 "----------------------------------
 set hidden                                       "no me importa que haya buffers ocultos
-map <F8> :bn<CR>
-imap <F8> <Esc>:bn<CR>
-map <F7> :bp<CR>
+
+map <F5> :e<CR>               " F5:refresh
+imap <F5> <Esc>:e<CR>
+map <F7> :bp<CR>              " F7:anterior
 imap <F7> <Esc>:bp<CR>
-map <F5> :e<CR>G
+map <F8> :bn<CR>              " F8:siguiente
+imap <F8> <Esc>:bn<CR>
+map <F10> :bd<CR>             " F10:cerrar
+imap <F10> <Esc>:bd<CR>
 
 "para cambiar de tab rápidamente
 "-------------------------------
