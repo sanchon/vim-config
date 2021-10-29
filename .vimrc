@@ -84,7 +84,7 @@ if has("gui_running")                                       "El tipo de letra en
     set guifont=Ubuntu\ Mono\ derivative\ Powerline:h12     " ---en Mac OS X
   elseif has("win32")                                       " |
     " set guifont=Ubuntu_Mono_derivative_Powerlin:h9:cANSI  " ---en Windows
-    set guifont=Fira\ Code\ Medium:h10:cANSI  " ---en Windows
+    set guifont=Fira\ Code\ Medium:h9:cANSI  " ---en Windows
   else                                                      " |
     set guifont=Droid\ Sans\ Mono\ 8                        " ·--elsewhere
   endif
@@ -104,7 +104,7 @@ set foldmethod=syntax
 set nofoldenable
 
 set renderoptions=type:directx
-set encoding=utf-8
+" set encoding=utf-8
 "--------------------------------------------------------------------------
 
 
@@ -148,6 +148,23 @@ vnoremap : y:<C-r>"<C-b>
 
 
 
+
+"-----------------------------------------------------------------------
+" para hacer querys rapidamente, meter ' al principio y ', al final
+" ------------------------------------------------------------------------
+command! -bar Lista :%s/^/\'/g|:%s/$/\'\,/g
+
+
+
+
+
+
+
+
+
+
+
+
 " ------------------------------------------------------------------------
 "  Plugin: vim-plug
 " ------------------------------------------------------------------------
@@ -180,6 +197,7 @@ Plug 'vifm/vifm.vim'
 Plug 'skanehira/preview-markdown.vim'
 Plug 'vimwiki/vimwiki'
 Plug 'dhruvasagar/vim-open-url'
+Plug 'vim-ctrlspace/vim-ctrlspace'
 call plug#end()
 
 " ------------------------------------------------------------------------
@@ -211,11 +229,11 @@ map <leader>g :GundoToggle<CR>
 if has("gui_running")
     let g:airline_powerline_fonts=1  "(estos simbolitos no funcionan en la shell)
 endif
-" let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#branch#enabled = 1
 " let g:bufferline_echo = 0
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
-" let g:airline_section_b =airline#section#create_left(['%{CapsLockStatusline()}'])
+" let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+let g:airline_section_b =airline#section#create_left(['%{CapsLockStatusline()}'])
 
 
 
