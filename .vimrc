@@ -10,6 +10,14 @@ set nowrap
 set clipboard=unnamed                             "para que se use siempre el registro * en lugar del unnamed
 
 
+set backupdir=$HOME/.vim/temp//
+set directory=$HOME/.vim/temp//
+set undodir=$HOME/.vim/temp//
+
+
+
+
+
 "--------------------------------------------------------------------------
 " usabilidad
 "--------------------------------------------------------------------------
@@ -156,6 +164,10 @@ command! -bar Lista :%s/^/\'/g|:%s/$/\'\,/g
 
 
 
+"-----------------------------------------------------------------------
+" para abrir URLs (o cualquier puta cosa) a lo bruto en windows con start
+"-----------------------------------------------------------------------
+nmap ggg :!start "<c-r><c-a>"<CR>
 
 
 
