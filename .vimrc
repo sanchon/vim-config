@@ -176,7 +176,7 @@ command! -bar Lista :%s/^/\'/g|:%s/$/\'\,/g
 nmap ggg :!start "<c-r><c-a>"<CR>
 
 
-
+command! SqlIn %s/\s\+$// | %s/.*/'&'/ | %s/\n/,/g | %s/,$// | yy
 
 
 
